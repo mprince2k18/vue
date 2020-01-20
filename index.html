@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Hello, world!</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+
+  <div id="vue-app">
+    <!-- instance -->
+    <h1>{{ name }}</h1>
+    <h1>{{ email }}</h1>
+    <!-- methods -->
+    <h1>{{ greet('Afternoon') }}</h1>
+    <!-- data binding -->
+    <a v-bind:href="email">Fox Devs</a>
+    <p v-html="email"></p>
+    <!-- events -->
+    <!-- click -->
+    <button v-on:click="add(1)">Add</button>
+    <button v-on:click="subtract(1)">Subtract</button>
+    <!-- dblclick -->
+    <button v-on:dblclick="add(5)">Add</button>
+    <button v-on:dblclick="subtract(5)">Subtract</button>
+    <h1>My age {{ age }}</h1>
+    <!-- mousemove -->
+    <div id="canvas" v-on:mousemove="objectxy" style="width:600px; padding:200px 20px; text-align:center; border:1px solid black;">
+       {{ x }},{{ y }}
+    </div>
+  </div>
+
+
+  <script src="app.js"></script>
+
+  </body>
+</html>
